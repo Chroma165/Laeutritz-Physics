@@ -10,7 +10,7 @@ class Instance {
   }
   
   calcPolyAbs() {
-    let polyAbs = this.poly;
+    let polyAbs = this.polyRel;
     polyAbs.forEach((element) => {
       element.x += this.pos[0];
       element.y += this.pos[1];
