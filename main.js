@@ -10,4 +10,4 @@ const testPoly = [
 
 const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
 
-test.draw(ctx);
+test.update(ctx);
