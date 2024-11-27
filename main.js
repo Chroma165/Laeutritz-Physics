@@ -14,7 +14,7 @@ const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
 instances.push(test);
 
 function tick() {
-  ctx.clear();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   instances.forEach((element) => {
     element.update(ctx);
   });
