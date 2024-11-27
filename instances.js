@@ -2,7 +2,7 @@ class Instance {
   constructor(pos, poly, mass, velo, color, ctx) {
     this.pos = pos;
     this.polyRel = poly;
-    this.polyAbs = poly;
+    this.polyAbs = this.calcPolyAbs();
     this.massKg = mass;
     this.veloVec = velo;
     this.color = color;
@@ -15,6 +15,7 @@ class Instance {
       element.x += this.pos[0];
       element.y += this.pos[1];
     })
+    return polyAbs;
   }
   
   draw(ctx) {
