@@ -14,7 +14,7 @@ class Instance {
     polyAbs.forEach((element) => {
       element.x += this.pos[0];
       element.y += this.pos[1];
-    })
+    });
     return polyAbs;
   }
   
@@ -23,7 +23,7 @@ class Instance {
   }
   
   update(ctx) {
-    calcPolyAbs();
-    draw(ctx);
+    this.calcPolyAbs();
+    this.draw(ctx);
   }
 }
