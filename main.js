@@ -20,6 +20,7 @@ document.addEventListener("keydown", (event) => {
     instances.forEach((item) => {
       item.update(ctx);
     });
-    test.update(ctx);
+    
   }
 });
+test.update(ctx);
