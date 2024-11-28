@@ -14,10 +14,12 @@ const testPoly = [
 const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
 instances.push(test);
 
-function tick() {
-  heading.innerHTML = "DEBUG";
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  instances.forEach((element) => {
-    element.update(ctx);
-  });
-}
+document.addEventListener("keydown", (event) => {
+  if (event.key = "t") {
+    heading.innerHTML = "DEBUG";
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    instances.forEach((element) => {
+      element.update(ctx);
+    });
+  }
+});
