@@ -1,5 +1,6 @@
 const screen = document.querySelector("#screen");
 const ctx = screen.getContext("2d");
+const heading = document.querySelector("#heading");
 
 let instances = [];
 
@@ -14,6 +15,7 @@ const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
 instances.push(test);
 
 function tick() {
+  heading.innerHTML = "DEBUG";
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   instances.forEach((element) => {
     element.update(ctx);
