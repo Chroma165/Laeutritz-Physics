@@ -1,6 +1,5 @@
 const screen = document.querySelector("#screen");
 const ctx = screen.getContext("2d");
-const heading = document.querySelector("#heading");
 
 let instances = [];
 
@@ -14,13 +13,17 @@ const testPoly = [
 const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
 instances.push(test);
 
+window.onload(updateScreen);
+
+function updateScreen() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  instances.forEach((item) => {
+    item.update(ctx);
+  });
+}
+
 document.addEventListener("keydown", (event) => {
   if (event.code === "KeyT") {
-    // ctx.clearRect(0, 0, canvas.width, canvas.height);
-    instances.forEach((item) => {
-      item.update(ctx);
-    });
-    
+    updateScreen();
   }
 });
-test.update(ctx);
