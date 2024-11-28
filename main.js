@@ -15,7 +15,7 @@ const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
 instances.push(test);
 
 document.addEventListener("keydown", (event) => {
-  if (event.code === "keyT") {
+  if (event.code === "t") {
     heading.innerHTML = "DEBUG";
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     instances.forEach((item) => {
