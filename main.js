@@ -26,6 +26,7 @@ function updateScreen() {
 
 document.addEventListener("keydown", (event) => {
   if (event.code === "KeyT") {
+    debugOut.innerHTML = "click";
     updateScreen();
   }
 });
