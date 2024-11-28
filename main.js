@@ -1,5 +1,6 @@
 const screen = document.querySelector("#screen");
 const ctx = screen.getContext("2d");
+const debugOut = document.querySelector("#debug");
 
 let instances = [];
 
@@ -16,6 +17,7 @@ instances.push(test);
 window.onload(updateScreen);
 
 function updateScreen() {
+  debugOut.innerHTML = "tick";
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   instances.forEach((item) => {
     item.update(ctx);
