@@ -18,8 +18,8 @@ document.addEventListener("keydown", (event) => {
   if (event.code = "keyT") {
     heading.innerHTML = "DEBUG";
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    instances.forEach((element) => {
-      element.update(ctx);
+    instances.forEach((item) => {
+      item.update(ctx);
     });
     test.update(ctx);
   }
