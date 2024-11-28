@@ -16,8 +16,7 @@ instances.push(test);
 
 document.addEventListener("keydown", (event) => {
   if (event.code === "KeyT") {
-    heading.innerHTML = "DEBUG";
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // ctx.clearRect(0, 0, canvas.width, canvas.height);
     instances.forEach((item) => {
       item.update(ctx);
     });
