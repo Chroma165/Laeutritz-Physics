@@ -14,7 +14,7 @@ const testPoly = [
 const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
 instances.push(test);
 
-window.onload(updateScreen);
+window.onload = updateScreen;
 
 function updateScreen() {
   debugOut.innerHTML = "tick";
