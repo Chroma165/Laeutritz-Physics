@@ -23,7 +23,7 @@ function updateScreen() {
     item.update(ctx);
   });
 }
-debugOut.innerHTML = "yeet";
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "KeyT") {
     debugOut.innerHTML = "click";
