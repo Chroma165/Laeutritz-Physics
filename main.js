@@ -18,7 +18,7 @@ window.onload = updateScreen;
 
 function updateScreen() {
   debugOut.innerHTML = "tick";
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, screen.width, screen.height);
   instances.forEach((item) => {
     item.update(ctx);
   });
