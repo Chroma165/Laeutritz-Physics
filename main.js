@@ -14,7 +14,9 @@ const testPoly = [
 const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
 instances.push(test);
 
-window.onload = updateScreen;
+window.onload = () => {
+  setInterval(updateScreen, 1000/60); // 60FPS
+};
 
 function updateScreen() {
   debugOut.innerHTML = "tick";
@@ -23,10 +25,3 @@ function updateScreen() {
     item.update(ctx);
   });
 }
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "KeyT") {
-    debugOut.innerHTML = "click";
-    updateScreen();
-  }
-});
