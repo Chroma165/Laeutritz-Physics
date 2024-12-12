@@ -11,8 +11,10 @@ const testPoly = [
   { x:  100, y: -100 },
 ];
 
-const test = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
-instances.push(test);
+const test1 = new Instance([500, 500], testPoly, 3, [2, 2], "#8800ff");
+const test2 = new Instance([700, 700], testPoly, 3, [-1, -3], "#ffb880");
+instances.push(test1);
+instances.push(test2);
 
 window.onload = () => {
   setInterval(updateScreen, 1000/60); // 60FPS
