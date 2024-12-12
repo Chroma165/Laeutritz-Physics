@@ -1,12 +1,11 @@
 class Instance {
-  constructor(pos, poly, mass, velo, color, ctx) {
+  constructor(pos, poly, mass, velo, color) {
     this.pos = pos;
     this.polyRel = poly;
     this.#calcPolyAbs();
     this.massKg = mass;
     this.velo = velo;
     this.color = color;
-    this.ctx = ctx;
   }
   
   #calcPolyAbs() {
