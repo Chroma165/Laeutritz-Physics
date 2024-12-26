@@ -37,7 +37,7 @@ function polyIntersection(poly1, poly2) {
   }
   return false;
 }
-
+/*
 function getPolyIntersection(poly1, poly2) {
   let intersections = [];
   for (let i = 0; i < poly1.length; i++) {
@@ -58,7 +58,7 @@ function getPolyIntersection(poly1, poly2) {
   }
   return null;
 }
-
+*/
 function drawPoly(polygon, color, ctx) {
   ctx.fillStyle = color;
   ctx.beginPath();

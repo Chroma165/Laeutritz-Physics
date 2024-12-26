@@ -26,8 +26,8 @@ function updateScreen() {
   });
 }
 
-function getCollisons(instances, index) {
-  let collisons;
+function checkCollisons(instances, index) {
+  let collisons = [];
   for(let i=0; i<instances.length-1; i++) {
     let poly1 = instances[index].polyAbs;
     let poly2;
@@ -36,7 +36,9 @@ function getCollisons(instances, index) {
     } else {
       poly2 = instances[i+1].polyAbs;
     }
-    collisons = getPolyIntersection(poly1, poly2);
+    if (polyIntersection(poly1, poly2)) {
+      collisons.push(index);
+    }
   }
   return collisons;
 }
