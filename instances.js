@@ -21,7 +21,7 @@ class Instance {
   }
 
   #move() {
-    
+    this.collisions = checkCollisons(this.index);
     this.pos[0] += this.velo[0];
     this.pos[1] += this.velo[1];
   }

@@ -26,7 +26,7 @@ function updateScreen() {
   });
 }
 
-function checkCollisons(instances, index) {
+function checkCollisons(index) {
   let collisons = [];
   for(let i=0; i<instances.length-1; i++) {
     let poly1 = instances[index].polyAbs;
