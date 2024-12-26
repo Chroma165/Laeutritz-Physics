@@ -38,4 +38,5 @@ function getCollisons(instances, index) {
     }
     collisons = getPolyIntersection(poly1, poly2);
   }
+  return collisons;
 }
