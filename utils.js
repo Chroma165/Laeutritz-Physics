@@ -1,5 +1,3 @@
-console.log("Utils loading...");
-
 function lerp(A, B, t) {
   return A + (B - A) * t;
 }
@@ -16,7 +14,6 @@ function getIntersection(A, B, C, D) {
       return {
         x: lerp(A.x, B.x, t),
         y: lerp(A.y, B.y, t),
-        offset: t,
       };
     }
   }
@@ -41,6 +38,27 @@ function polyIntersection(poly1, poly2) {
   return false;
 }
 
+function getPolyIntersection(poly1, poly2) {
+  let intersections = [];
+  for (let i = 0; i < poly1.length; i++) {
+    for (let j = 0; j < poly2.length; j++) {
+      const touch = getIntersection(
+        poly1[i],
+        poly1[(i + 1) % poly1.length],
+        poly2[j],
+        poly2[(j + 1) % poly2.length]
+      );
+      if (touch) {
+        intersections.push(touch);
+      }
+    }
+  }
+  if (intersections) {
+    return intersections;
+  }
+  return null;
+}
+
 function drawPoly(polygon, color, ctx) {
   ctx.fillStyle = color;
   ctx.beginPath();
@@ -54,4 +72,3 @@ function drawPoly(polygon, color, ctx) {
 /*
      polygon => [{x:*x*, y:*y*}, {x:*x*, y:*y*}, {x:*x*, y:*y*}]
 */
-console.log("Utils loaded succesfully");

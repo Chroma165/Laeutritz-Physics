@@ -1,11 +1,12 @@
 class Instance {
-  constructor(pos, poly, mass, velo, color) {
+  constructor(pos, poly, mass, velo, color, index) {
     this.pos = pos;
     this.polyRel = poly;
     this.#calcPolyAbs();
     this.massKg = mass;
     this.velo = velo;
     this.color = color;
+    this.index = index;
   }
   
   #calcPolyAbs() {
@@ -20,6 +21,7 @@ class Instance {
   }
 
   #move() {
+    
     this.pos[0] += this.velo[0];
     this.pos[1] += this.velo[1];
   }
